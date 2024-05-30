@@ -1,0 +1,36 @@
+name: Auto Merge PRs to Develop
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  auto-merge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Check branch name pattern
+        id: check_branch
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          if [[ ! "$BRANCH_NAME" =~ ^(docs|feature|fix|perf|refactor|style|test|improvement)/[0-9]+-.+ ]]; then
+            echo "Branch name $BRANCH_NAME does not match required pattern."
+            exit 1
+          fi
+
+      - name: Merge to develop
+        if: steps.check_branch.outcome == 'success'
+        run: |
+          git checkout develop
+          git merge --no-ff ${{ github.event.pull_request.head.sha }}
+          git push origin develop
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
