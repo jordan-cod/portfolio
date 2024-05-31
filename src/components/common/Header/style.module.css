@@ -1,0 +1,39 @@
+.header{
+    background-color: black;
+    width: 100%;
+    height: 80px;
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header > nav{
+    width: 1080px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header > nav > ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    column-gap: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;    
+}
+.header > nav > ul > a{
+    display: block;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid transparent;
+    transition: border .2s ease-in-out;
+}
+.header > nav > ul > a:hover{
+    border-bottom: 3px solid red;
+}
