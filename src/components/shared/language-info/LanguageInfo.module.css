@@ -1,0 +1,18 @@
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+.language div {
+    display: flex;
+    flex-direction: column;
+}
+.language div p:first-child {
+    color: #ffffff;
+    font-weight: bold;
+}
+.language div p:last-child {
+    color: #b0bac5;
+    font-weight: bold;
+}
