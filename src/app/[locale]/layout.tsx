@@ -4,6 +4,7 @@ import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 
 import "@/styles/globals.css";
+import ScrollToTopButton from "@/components/shared/buttons/scroll-to-top-button/scrollToTopButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,10 @@ export default async function RootLayout({
     return (
         <html lang={locale}>
             <NextIntlClientProvider messages={messages}>
-                <body className={inter.className}>{children}</body>
+                <body className={inter.className}>
+                    {children}
+                    <ScrollToTopButton />
+                </body>
             </NextIntlClientProvider>
         </html>
     );
