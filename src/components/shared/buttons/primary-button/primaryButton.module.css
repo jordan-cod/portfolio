@@ -1,0 +1,25 @@
+.primaryButton {
+    background-color: #434956;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    width: 150px;
+    height: 40px;
+}
+.primaryButton:hover {
+    background-color: #1bd96a;
+    color: #16181c;
+}
+.disabled {
+    cursor: not-allowed;
+}
+.disabled:hover {
+    background-color: #434956;
+    color: #ffffff;
+    cursor: not-allowed;
+}
