@@ -1,0 +1,77 @@
+{
+    "Index": {
+        "Header": {
+            "links": {
+                "home": "Home",
+                "projects": "Projects"
+            }
+        },
+        "HomePage": {
+            "about": {
+                "title": "Hello, my name is Gabriel Jordan.",
+                "subtitle": "A FullStack Developer",
+                "languages": {
+                    "title": "Languages",
+                    "portuguese": {
+                        "title": "Portuguese",
+                        "subtitle": "Native"
+                    },
+                    "english": {
+                        "title": "English",
+                        "subtitle": "Intermediate"
+                    }
+                },
+                "skills": {
+                    "title": "Skills"
+                }
+            },
+            "projects": {
+                "title": "Projects",
+                "button": "View more"
+            },
+            "work": {
+                "title": "Work Experience"
+            },
+            "contact": {
+                "title": "Contact",
+                "subtitle": "Have a project in mind or any questions? Get in touch.",
+                "form": {
+                    "name": {
+                        "label": "Name",
+                        "placeholder": "John Smith"
+                    },
+                    "e-mail": {
+                        "label": "E-mail",
+                        "placeholder": "contact@email.com"
+                    },
+                    "Message": {
+                        "label": "Message",
+                        "placeholder": "Your message"
+                    }
+                },
+                "button": "Send"
+            }
+        },
+        "ProjectsPage": {
+            "search": {
+                "search-bar": {
+                    "placeholder": "Search a project"
+                },
+                "Relevance": {
+                    "label": "Sorty by",
+                    "placeholder": "Relevance"
+                },
+                "Filter": {
+                    "label": "Filter",
+                    "placeholder": "All"
+                }
+            },
+            "projects": {
+                "title": "Projects"
+            }
+        },
+        "Footer": {
+            "button": "Change theme"
+        }
+    }
+}
