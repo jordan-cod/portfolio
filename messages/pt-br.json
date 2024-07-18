@@ -1,0 +1,73 @@
+{
+    "Header": {
+        "links": {
+            "home": "Inicio",
+            "projects": "Projetos"
+        }
+    },
+    "HomePage": {
+        "about": {
+            "title": "Olá, meu nome é Gabriel Jordan.",
+            "subtitle": "Um desenvolvedor FullStack",
+            "languages": {
+                "title": "Idiomas",
+                "portuguese": {
+                    "title": "Portgues",
+                    "subtitle": "Nativo"
+                },
+                "english": {
+                    "title": "Inglês",
+                    "subtitle": "Intermediário"
+                }
+            },
+            "skills": {
+                "title": "Habilidades"
+            }
+        },
+        "projects": {
+            "title": "Projetos",
+            "button": "Ver mais"
+        },
+        "work": {
+            "title": "Experiência Profissional"
+        },
+        "contact": {
+            "title": "Contato",
+            "subtitle": "Tem algum projeto em mente ou alguma dúvida? Entre em contato.",
+            "form": {
+                "name": {
+                    "label": "Nome",
+                    "placeholder": "John Smith"
+                },
+                "e-mail": {
+                    "label": "E-mail",
+                    "placeholder": "contato@email.com"
+                },
+                "Message": {
+                    "label": "Mensagem",
+                    "placeholder": "Sua messagem"
+                }
+            },
+            "button": "Enviar"
+        }
+    },
+    "ProjectsPage": {
+        "search": {
+            "search-bar": {
+                "placeholder": "Pesquise um projeto"
+            },
+            "Relevance": {
+                "label": "Ordenar por"
+            },
+            "Filter": {
+                "label": "Filtro"
+            }
+        },
+        "projects": {
+            "title": "Projetos"
+        }
+    },
+    "Footer": {
+        "button": "Trocar tema"
+    }
+}
