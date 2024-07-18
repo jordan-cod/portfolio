@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import PrimaryButton from "@/components/shared/buttons/primary-button/primaryButton";
+import PrimaryButton from "@/components/shared/buttons/primary-button/PrimaryButton";
 
 describe("PrimaryButton Component", () => {
     test("renders button correctly", () => {

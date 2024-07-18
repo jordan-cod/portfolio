@@ -1,4 +1,4 @@
-import styles from "./primaryButton.module.css";
+import styles from "./PrimaryButton.module.css";
 
 interface PrimaryButtonProps {
     onClick?: () => void;

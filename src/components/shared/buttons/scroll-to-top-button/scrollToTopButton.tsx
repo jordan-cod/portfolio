@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-import styles from "./scrollToTopButton.module.css";
+import styles from "./ScrollToTopButton.module.css";
 
 import { IoIosArrowUp } from "react-icons/io";
 
