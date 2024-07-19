@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 
 import "@/styles/globals.css";
 import ScrollToTopButton from "@/components/shared/buttons/scroll-to-top-button/ScrollToTopButton";
+import Header from "@/components/ui/header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default async function RootLayout({
         <html lang={locale}>
             <NextIntlClientProvider messages={messages}>
                 <body className={inter.className}>
+                    <Header />
                     {children}
                     <ScrollToTopButton />
                 </body>
