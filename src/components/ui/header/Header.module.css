@@ -1,0 +1,118 @@
+.header .desktop_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    z-index: 10;
+}
+.header .mobile_menu {
+    display: none;
+}
+.header .mobile_menu > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #26292f;
+    border-radius: 15px 15px 0px 0px;
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+.header .mobile_menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #26292f;
+
+    position: absolute;
+    right: 0px;
+    transform: translateY(120%);
+    width: 100%;
+
+    row-gap: 15px;
+    padding: 20px;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+}
+.header .mobile_menu ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header .mobile_menu ul li a {
+    padding: 12px;
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+
+    background-color: #434956;
+    border-radius: 15px;
+    border: none;
+
+    font-weight: 500;
+    color: #b0bac5;
+}
+.header .mobile_menu ul li a:hover {
+    background-color: #1bd96a;
+    color: #16181c;
+}
+.header .desktop_menu h1,
+.header .mobile_menu h1 {
+    font-size: 20px;
+    font-weight: 900;
+}
+.header .desktop_menu h1 b,
+.header .mobile_menu h1 b {
+    color: #1bd96a;
+    font-weight: 900;
+}
+.header .desktop_menu nav {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.header .desktop_menu nav ul {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.header .desktop_menu nav ul li a {
+    color: #1bd96a;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+@media (max-width: 1100px) {
+    .header .desktop_menu {
+        display: none;
+    }
+    .header .mobile_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+    .header .mobile_menu.active {
+        display: flex;
+        background-color: #26292f;
+    }
+    .header .mobile_menu.active div {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .header .mobile_menu.active ul {
+        transform: translateY(-67%);
+    }
+}
