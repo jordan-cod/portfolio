@@ -1,0 +1,77 @@
+.skeletonCard {
+    background-color: #26292f;
+    border-radius: 15px;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+    animation: pulse 1.5s infinite;
+}
+
+.skeletonImage {
+    width: 73px;
+    height: 73px;
+    background-color: #434956;
+    border-radius: 15px;
+}
+
+.skeletonContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    row-gap: 10px;
+}
+
+.skeletonTitle,
+.skeletonCompany,
+.skeletonPeriod {
+    height: 16px;
+    background-color: #434956;
+    border-radius: 4px;
+}
+
+.skeletonTitle {
+    width: 50%;
+}
+
+.skeletonCompany {
+    width: 40%;
+}
+
+.skeletonPeriod {
+    width: 30%;
+}
+
+.skeletonIcon {
+    width: 24px;
+    height: 24px;
+    background-color: #434956;
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #26292f;
+    }
+    50% {
+        background-color: #34393f;
+    }
+    100% {
+        background-color: #26292f;
+    }
+}
+
+@media (max-width: 768px) {
+    .skeletonCard figure {
+        display: none;
+    }
+    .skeletonContent {
+        width: 100%;
+        row-gap: 10px;
+    }
+    .skeletonCompany {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,90 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 15px;
+}
+
+.skeletonCard {
+    display: flex;
+    background-color: #26292f;
+    border-radius: 20px;
+    padding: 15px 20px;
+    column-gap: 15px;
+    position: relative;
+    z-index: 0;
+    animation: pulse 1.5s infinite;
+}
+
+.skeletonImage {
+    width: 112px;
+    height: 112px;
+    background-color: #434956;
+    border-radius: 15px;
+}
+
+.skeletonAboutProject {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.skeletonText {
+    height: 16px;
+    background-color: #434956;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.skeletonTechnologies {
+    display: inline-flex;
+    column-gap: 10px;
+}
+
+.skeletonTag {
+    width: 50px;
+    height: 20px;
+    background-color: #434956;
+    border-radius: 4px;
+}
+
+.skeletonAboutInfo {
+    flex: 1;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.skeletonIcon {
+    width: 24px;
+    height: 24px;
+    background-color: #434956;
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #26292f;
+    }
+    50% {
+        background-color: #34393f;
+    }
+    100% {
+        background-color: #26292f;
+    }
+}
+
+@media (max-width: 768px) {
+    .skeletonCard {
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: flex-start;
+    }
+    .skeletonAboutProject {
+        width: 100%;
+        row-gap: 10px;
+    }
+}

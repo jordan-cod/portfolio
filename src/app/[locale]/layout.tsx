@@ -4,7 +4,7 @@ import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 
 import "@/styles/globals.css";
-import ScrollToTopButton from "@/components/shared/buttons/scroll-to-top-button/ScrollToTopButton";
+import ScrollToTopButton from "@/components/shared/buttons/scroll-top-button/ScrollTopButton";
 import Header from "@/components/ui/header/Header";
 
 const inter = Inter({ subsets: ["latin"] });

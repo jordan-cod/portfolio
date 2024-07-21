@@ -1,7 +1,7 @@
 // components/ScrollToTopButton.test.tsx
 
 import { render, fireEvent } from "@testing-library/react";
-import ScrollToTopButton from "@/components/shared/buttons/scroll-to-top-button/ScrollToTopButton";
+import ScrollToTopButton from "@/components/shared/buttons/scroll-top-button/ScrollTopButton";
 
 describe("ScrollToTopButton", () => {
     it("should render without errors", () => {

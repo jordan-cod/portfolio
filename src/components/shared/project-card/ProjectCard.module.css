@@ -1,0 +1,62 @@
+.card {
+    display: flex;
+    background-color: #26292f;
+    border-radius: 20px;
+    padding: 15px 20px;
+
+    column-gap: 15px;
+    position: relative;
+    z-index: 0;
+}
+.card figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about_project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 70%;
+}
+.about_project h4 {
+    font-size: 1.4rem;
+}
+.about_info {
+    flex: 1;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    column-gap: 10px;
+    font-size: 1.3rem;
+}
+.about_info a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: baseline;
+    padding: 5px;
+    border-radius: 50%;
+}
+.about_info a:hover {
+    background-color: #434956;
+}
+.technologies {
+    display: inline-flex;
+    column-gap: 10px;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: flex-start;
+    }
+    .about_project {
+        width: 100%;
+        row-gap: 10px;
+    }
+}

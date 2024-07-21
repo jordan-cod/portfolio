@@ -1,0 +1,77 @@
+.card {
+    background-color: #26292f;
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+}
+
+.textContainer > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.textContainer h4 {
+    font-size: 1.3rem;
+}
+
+.textContainer h5 {
+    color: #bec2c6;
+    font-size: 1.1rem;
+}
+
+.textContainer p {
+    color: #b0bac5;
+}
+
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.dropdown {
+    background-color: #34393f;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .mainContent figure {
+        display: none;
+    }
+
+    .textContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 5px;
+    }
+
+    .textContainer h4 {
+        font-size: 1.1rem;
+    }
+
+    .textContainer h5 {
+        font-size: 1rem;
+    }
+
+    .icon {
+        align-self: flex-start;
+    }
+}
