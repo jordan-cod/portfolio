@@ -8,11 +8,11 @@
     "HomePage": {
         "about": {
             "title": "Olá, meu nome é Gabriel Jordan.",
-            "subtitle": "Um desenvolvedor FullStack",
+            "subtitle": "Desenvolvedor FullStack",
             "languages": {
                 "title": "Idiomas",
                 "portuguese": {
-                    "title": "Portgues",
+                    "title": "Português",
                     "subtitle": "Nativo"
                 },
                 "english": {
