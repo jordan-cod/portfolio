@@ -46,3 +46,8 @@
 .dropdown button:hover {
     background-color: #434956;
 }
+@media (max-width: 1300px) {
+    .dropdown {
+        right: 0px;
+    }
+}
