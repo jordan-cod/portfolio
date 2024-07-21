@@ -1,6 +1,7 @@
 "use client";
 import { useRouter, usePathname } from "next/navigation";
 import styles from "./PrimaryChangeLanguage.module.css";
+import { FaLanguage } from "react-icons/fa";
 
 export default function PrimaryChangeLanguage(): React.ReactNode {
     const router = useRouter();
@@ -33,6 +34,8 @@ export default function PrimaryChangeLanguage(): React.ReactNode {
             className={styles.languageButton}
             data-testid="change-lang-button"
         >
+            {" "}
+            <FaLanguage size={20} />
             {currentLocale === "en" ? "English" : "Português"}
         </span>
     );

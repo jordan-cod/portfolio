@@ -8,7 +8,7 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import ChangeLanguage from "@/components/shared/buttons/change-language/ChangeLanguage";
 import { useEffect, useRef, useState } from "react";
 import { IoClose } from "react-icons/io5";
-import { FaHome, FaLanguage } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { MdOutlineComputer } from "react-icons/md";
 import PrimaryChangeLanguage from "@/components/shared/buttons/primary-change-language/PrimaryChangeLanguage";
 
@@ -88,7 +88,6 @@ export default function Header() {
                     </li>
                     <li>
                         <a onClick={() => setIsOpen(false)}>
-                            <FaLanguage size={20} />
                             <PrimaryChangeLanguage />
                         </a>
                     </li>
