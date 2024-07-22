@@ -43,12 +43,34 @@
                     "label": "E-mail",
                     "placeholder": "contato@email.com"
                 },
-                "Message": {
+                "message": {
                     "label": "Mensagem",
                     "placeholder": "Sua messagem"
                 }
             },
-            "button": "Enviar"
+            "button": {
+                "static": "Enviar",
+                "sending": "Enviando..."
+            },
+            "validate": {
+                "name": {
+                    "empty": "Por favor, insira seu nome.",
+                    "limit": "O nome deve ter no máximo 100 caracteres."
+                },
+                "e-mail": {
+                    "empty": "Por favor, insira seu email.",
+                    "limit": "O e-mail deve ter no máximo 100 caracteres.",
+                    "invalid": "Por favor, insira um email válido."
+                },
+                "message": {
+                    "empty": "Por favor, insira uma mensagem.",
+                    "limit": "A mensagem deve ter no máximo 255 caracteres."
+                }
+            },
+            "status-message": {
+                "success": "Mensagem enviada com sucesso!",
+                "error": "Erro ao enviar mensagem. Tente novamente mais tarde."
+            }
         }
     },
     "ProjectsPage": {

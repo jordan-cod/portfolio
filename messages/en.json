@@ -43,12 +43,34 @@
                     "label": "E-mail",
                     "placeholder": "contact@email.com"
                 },
-                "Message": {
+                "message": {
                     "label": "Message",
                     "placeholder": "Your message"
                 }
             },
-            "button": "Send"
+            "button": {
+                "static": "Send",
+                "sending": "Sending..."
+            },
+            "validate": {
+                "name": {
+                    "empty": "Please, enter your name.",
+                    "limit": "Name must be no more than 100 characters."
+                },
+                "e-mail": {
+                    "empty": "Please, enter your e-mail.",
+                    "limit": "Email must be no more than 100 characters.",
+                    "invalid": "Please enter a valid email."
+                },
+                "message": {
+                    "empty": "Please, enter your message.",
+                    "limit": "Message must be no more than 255 characters."
+                }
+            },
+            "status-message": {
+                "success": "Message sent successfully!",
+                "error": "Error sending message. Please try again later."
+            }
         }
     },
     "ProjectsPage": {
