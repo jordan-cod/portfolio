@@ -13,6 +13,7 @@ import WorkSection from "@/components/HomePage/work-section/WorkSection";
 
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BiSolidFilePdf } from "react-icons/bi";
+import ContactForm from "@/components/HomePage/contact-form/ContactForm";
 
 export default function HomePage() {
     const t = useTranslations("HomePage");
@@ -92,6 +93,10 @@ export default function HomePage() {
                 <Link href={"/work-experience"} className={styles.card_link}>
                     {t("projects.button")}
                 </Link>
+            </section>
+            <section className={styles.contact_section}>
+                <h3>{t("contact.title")}</h3>
+                <ContactForm />
             </section>
         </main>
     );

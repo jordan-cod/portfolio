@@ -1,0 +1,106 @@
+.contact {
+    padding: 30px 0px;
+}
+.contact > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+.contact > div > div > div:first-child {
+    display: flex;
+    justify-content: center;
+}
+.contact > div > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.contact > div form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 615px;
+}
+.contact > div form input,
+.contact > div form textarea {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #d2d5da;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact > div form input::placeholder,
+.contact > div form textarea::placeholder {
+    color: #ffffff;
+}
+.contact > div form textarea {
+    height: 150px;
+}
+.contact > div form label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background: #16181c;
+}
+.contact > div form label span {
+    color: red;
+}
+.contact > div form button {
+    background-color: #1bd96a;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #16181c;
+    border-radius: 8px;
+    height: 60px;
+    cursor: pointer;
+    transition: background 0.2s linear;
+}
+.contact > div form button:hover {
+    background-color: #10813f;
+}
+.contact > div form div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+}
+.contact > div form input.invalid,
+.contact > div form textarea.invalid {
+    border: 1px solid red;
+}
+#status-message {
+    display: none;
+}
+.error {
+    color: red;
+    font-size: 0.875em;
+    display: block;
+}
+.success {
+    color: green;
+    font-size: 0.875em;
+    display: block;
+}
+.disabled {
+    cursor: not-allowed;
+    background: #d2d5da !important;
+}
+@media (max-width: 1080px) {
+    .contact > div {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .contact > div form {
+        width: 100%;
+    }
+}
