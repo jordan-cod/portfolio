@@ -2,6 +2,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import Image from "next/image";
 import styles from "./ContactForm.module.css";
+import { useTranslations } from "next-intl";
 
 interface FormData {
     name: string;
@@ -15,7 +16,8 @@ interface Errors {
     message?: string;
 }
 
-const ContactForm = () => {
+export default function ContactForm() {
+    const t = useTranslations("HomePage");
     const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
@@ -26,37 +28,38 @@ const ContactForm = () => {
     const [statusMessage, setStatusMessage] = useState<string>("");
     const [statusClass, setStatusClass] = useState<string>("");
 
-    const handleChange = (
+    function handleChange(
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    ) => {
+    ) {
         setFormData({
             ...formData,
             [e.target.id]: e.target.value,
         });
-    };
+    }
 
-    const validate = (): Errors => {
+    function validate(): Errors {
         const newErrors: Errors = {};
-        if (!formData.name) newErrors.name = "Por favor, insira seu nome.";
-        if (!formData.email) newErrors.email = "Por favor, insira seu email.";
+        if (!formData.name) newErrors.name = t("contact.validate.name.empty");
+        if (!formData.email)
+            newErrors.email = t("contact.validate.e-mail.empty");
         if (!formData.message)
-            newErrors.message = "Por favor, insira uma mensagem.";
+            newErrors.message = t("contact.validate.message.empty");
         if (formData.name.length > 100)
-            newErrors.name = "O nome deve ter no máximo 100 caracteres.";
+            newErrors.name = t("contact.validate.name.limit");
         if (formData.email.length > 100)
-            newErrors.email = "O email deve ter no máximo 100 caracteres.";
+            newErrors.email = t("contact.validate.e-mail.limit");
         if (formData.message.length > 255)
-            newErrors.message = "A mensagem deve ter no máximo 255 caracteres.";
+            newErrors.message = t("contact.validate.message.limit");
         if (
             formData.email &&
             !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
         ) {
-            newErrors.email = "Por favor, insira um email válido.";
+            newErrors.email = t("contact.validate.e-mail.invalid");
         }
         return newErrors;
-    };
+    }
 
-    const submitForm = async (e: FormEvent) => {
+    async function submitForm(e: FormEvent) {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
@@ -86,18 +89,21 @@ const ContactForm = () => {
                 email: "",
                 message: "",
             });
-            showStatusMessage("Mensagem enviada com sucesso!", "success");
+            showStatusMessage(
+                t("contact.validate.status-message.success"),
+                "success",
+            );
         } catch (error) {
             showStatusMessage(
-                "Erro ao enviar mensagem. Tente novamente mais tarde.",
+                t("contact.validate.status-message.error"),
                 "error",
             );
         } finally {
             setSubmitting(false);
         }
-    };
+    }
 
-    const showStatusMessage = (message: string, type: string) => {
+    function showStatusMessage(message: string, type: string) {
         setStatusMessage(message);
         setStatusClass(type);
 
@@ -105,7 +111,7 @@ const ContactForm = () => {
             setStatusMessage("");
             setStatusClass("");
         }, 5000);
-    };
+    }
 
     return (
         <section id="contact" className={styles.contact}>
@@ -119,21 +125,18 @@ const ContactForm = () => {
                             height={280}
                         />
                     </div>
-                    <h3>Entre em contato</h3>
-                    <p>
-                        Estamos aqui para ajudar! Entre em contato conosco para
-                        solucionar suas necessidades de transporte.
-                    </p>
+                    <p>{t("contact.subtitle")}</p>
                 </div>
                 <form id="contact-form" onSubmit={submitForm}>
                     <div>
                         <label htmlFor="name">
-                            Nome<span> *</span>
+                            {t("contact.form.name.label")}
+                            <span> *</span>
                         </label>
                         <input
                             id="name"
                             type="text"
-                            placeholder="Seu nome"
+                            placeholder={t("contact.form.name.placeholder")}
                             maxLength={100}
                             value={formData.name}
                             onChange={handleChange}
@@ -145,12 +148,13 @@ const ContactForm = () => {
                     </div>
                     <div>
                         <label htmlFor="email">
-                            E-mail<span> *</span>
+                            {t("contact.form.e-mail.label")}
+                            <span> *</span>
                         </label>
                         <input
                             id="email"
                             type="email"
-                            placeholder="contato@exemplo.com"
+                            placeholder={t("contact.form.e-mail.placeholder")}
                             maxLength={100}
                             value={formData.email}
                             onChange={handleChange}
@@ -162,11 +166,12 @@ const ContactForm = () => {
                     </div>
                     <div>
                         <label htmlFor="message">
-                            Mensagem<span> *</span>
+                            {t("contact.form.message.label")}
+                            <span> *</span>
                         </label>
                         <textarea
                             id="message"
-                            placeholder="Sua mensagem"
+                            placeholder={t("contact.form.message.placeholder")}
                             maxLength={255}
                             value={formData.message}
                             onChange={handleChange}
@@ -181,7 +186,9 @@ const ContactForm = () => {
                         disabled={submitting}
                         className={submitting ? styles.disabled : ""}
                     >
-                        {submitting ? "Enviando..." : "Enviar"}
+                        {submitting
+                            ? t("contact.button.sending")
+                            : t("contact.button.static")}
                     </button>
                 </form>
                 <div id="status-message" className={statusClass}>
@@ -190,6 +197,4 @@ const ContactForm = () => {
             </div>
         </section>
     );
-};
-
-export default ContactForm;
+}
