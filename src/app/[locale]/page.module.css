@@ -55,7 +55,8 @@
     row-gap: 20px;
 }
 .projects_section h3,
-.work_section h3 {
+.work_section h3,
+.contact_section h3 {
     font-size: 1.5rem;
 }
 .card_link {
