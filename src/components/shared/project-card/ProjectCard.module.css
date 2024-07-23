@@ -49,6 +49,11 @@
     font-style: italic;
     font-size: 0.9rem;
 }
+.date {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
 @media (max-width: 768px) {
     .card {
         flex-direction: column;
@@ -58,5 +63,10 @@
     .about_project {
         width: 100%;
         row-gap: 10px;
+    }
+    .date {
+        position: static;
+        width: 100%;
+        text-align: right;
     }
 }

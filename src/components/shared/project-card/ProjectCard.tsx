@@ -20,6 +20,7 @@ interface ProjectCardProps {
         technologies: Array<string>;
         repoUrl: string;
         deployUrl: string;
+        date: string;
     };
 }
 
@@ -29,6 +30,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     function getCurrentLocale(): string {
         const pathParts = pathname.split("/");
         return pathParts[1] || "en";
+    }
+
+    function formatDate(date: string): string {
+        const locale = getCurrentLocale();
+        const formatter = new Intl.DateTimeFormat(locale, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        });
+        return formatter.format(new Date(date));
     }
 
     return (
@@ -61,6 +72,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <Link href={project.deployUrl} target="_blank">
                     <TbWorld />
                 </Link>
+            </div>
+            <div className={styles.date}>
+                <p>{formatDate(project.date)}</p>
             </div>
         </article>
     );
