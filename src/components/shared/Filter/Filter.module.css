@@ -1,0 +1,75 @@
+.filter {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 10px;
+    width: 100%;
+}
+.filter > div {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.filter > div:first-child {
+    flex: 1;
+    display: flex;
+    position: relative;
+    color: #b0bac5;
+}
+.filter > div:first-child svg {
+    position: absolute;
+    top: 2px;
+    font-size: 2.1rem;
+    padding: 7px;
+    cursor: pointer;
+}
+.filter > div:first-child svg:first-child {
+    left: 0px;
+    border-radius: 10px 0px 0px 10px;
+}
+.filter > div:first-child svg:last-child {
+    display: none;
+    right: 0px;
+    border-radius: 0px 10px 10px 0px;
+}
+.filter > div:first-child svg:last-child.active {
+    display: block;
+}
+.filter > div:first-child input {
+    background-color: #434956;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 10px 10px 10px 35px;
+    width: 100%;
+    outline: none;
+    border: 2px solid transparent;
+}
+.filter > div:first-child input:focus {
+    border: 2px solid #1bd96a;
+}
+.filter > div:first-child input::placeholder {
+    color: #b0bac5;
+    font-size: 1rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (max-width: 1100px) {
+    .filter {
+        row-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .filter > div:first-child {
+        grid-column: 1/3;
+    }
+    .filter > div:not(:first-child) {
+        justify-self: center;
+    }
+}
+@media (max-width: 768px) {
+    .filter > div {
+        grid-column: 1/3;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        row-gap: 5px;
+    }
+}
