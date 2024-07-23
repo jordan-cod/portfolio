@@ -59,13 +59,9 @@ export default function ProjectsSection() {
     return (
         <>
             <div className={styles.cards}>
-                {loading ? (
-                    <p>Loading...</p>
-                ) : (
-                    projects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))
-                )}
+                {projects.slice(0, 3).map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                ))}
             </div>
         </>
     );
