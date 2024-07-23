@@ -20,6 +20,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
                 imgUrl: "/teste.png",
                 repoUrl: "https://github.com/jordan-cod/Projeto-Strata",
                 deployUrl: "https://jordan-cod.github.io/Projeto-Strata/",
+                date: "2021-08-28",
             },
             {
                 title: "Projeto Fashion",
@@ -31,6 +32,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
                 imgUrl: "/teste.png",
                 repoUrl: "https://github.com/jordan-cod/Projeto-Fashion",
                 deployUrl: "https://jordan-cod.github.io/Projeto-Fashion/",
+                date: "2021-08-28",
             },
             {
                 title: "Easy Bank",
@@ -42,6 +44,43 @@ export async function GET(req: NextRequest, res: NextResponse) {
                 imgUrl: "/teste.png",
                 repoUrl: "https://github.com/jordan-cod/EasyBankLandingPage",
                 deployUrl: "https://jordan-cod.github.io/EasyBankLandingPage/",
+                date: "2021-07-05",
+            },
+            {
+                title: "Easy Bank",
+                description: {
+                    en: "The Easy Bank page was developed as a challenge from the Frontend Mentor website. The main idea was to build the site using only HTML, CSS, and JavaScript.",
+                    pt: "A página Easy Bank foi desenvolvida como desafio do site Frontend Mentor. A ideia principal foi desenvolver o site utilizando apenas HTML, CSS e JavaScript.",
+                },
+                technologies: ["HTML", "CSS", "JavaScript"],
+                imgUrl: "/teste.png",
+                repoUrl: "https://github.com/jordan-cod/EasyBankLandingPage",
+                deployUrl: "https://jordan-cod.github.io/EasyBankLandingPage/",
+                date: "2021-07-05",
+            },
+            {
+                title: "Easy Bank",
+                description: {
+                    en: "The Easy Bank page was developed as a challenge from the Frontend Mentor website. The main idea was to build the site using only HTML, CSS, and JavaScript.",
+                    pt: "A página Easy Bank foi desenvolvida como desafio do site Frontend Mentor. A ideia principal foi desenvolver o site utilizando apenas HTML, CSS e JavaScript.",
+                },
+                technologies: ["HTML", "CSS", "JavaScript"],
+                imgUrl: "/teste.png",
+                repoUrl: "https://github.com/jordan-cod/EasyBankLandingPage",
+                deployUrl: "https://jordan-cod.github.io/EasyBankLandingPage/",
+                date: "2021-07-05",
+            },
+            {
+                title: "Easy Bank",
+                description: {
+                    en: "The Easy Bank page was developed as a challenge from the Frontend Mentor website. The main idea was to build the site using only HTML, CSS, and JavaScript.",
+                    pt: "A página Easy Bank foi desenvolvida como desafio do site Frontend Mentor. A ideia principal foi desenvolver o site utilizando apenas HTML, CSS e JavaScript.",
+                },
+                technologies: ["HTML", "CSS", "JavaScript"],
+                imgUrl: "/teste.png",
+                repoUrl: "https://github.com/jordan-cod/EasyBankLandingPage",
+                deployUrl: "https://jordan-cod.github.io/EasyBankLandingPage/",
+                date: "2024-07-05",
             },
         ];
 
