@@ -1,0 +1,44 @@
+.selectContainer {
+    position: relative;
+    width: 200px;
+}
+
+.selectedValue {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #434956;
+}
+
+.arrow {
+    margin-left: 10px;
+}
+
+.options {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    border-top: none;
+    background-color: #434956;
+    border-radius: 10px;
+    z-index: 8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #26292f;
+}
+@media (max-width: 768px) {
+    .selectContainer {
+        width: 100%;
+    }
+}
