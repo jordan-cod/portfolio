@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@/lib/navigation";
 import Image from "next/image";
 
@@ -14,9 +15,37 @@ import WorkSection from "@/components/HomePage/work-section/WorkSection";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BiSolidFilePdf } from "react-icons/bi";
 import ContactForm from "@/components/HomePage/contact-form/ContactForm";
+import { useEffect } from "react";
 
 export default function HomePage() {
     const t = useTranslations("HomePage");
+
+    useEffect(() => {
+        if (
+            typeof window !== "undefined" &&
+            process.env.NODE_ENV === "production"
+        ) {
+            (function (h, o, t, j, a, r) {
+                h.hj =
+                    h.hj ||
+                    function () {
+                        (h.hj.q = h.hj.q || []).push(arguments);
+                    };
+                h._hjSettings = { hjid: 5114057, hjsv: 6 };
+                a = o.getElementsByTagName("head")[0];
+                r = o.createElement("script");
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(
+                window,
+                document,
+                "https://static.hotjar.com/c/hotjar-",
+                ".js?sv=",
+            );
+        }
+    }, []);
+
     return (
         <main className={`container ${styles.main}`}>
             <section className={styles.about_section}>
